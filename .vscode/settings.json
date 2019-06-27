@@ -1,0 +1,70 @@
+{
+    "debug.node.autoAttach": "on",
+
+    "git.autofetch": true,
+    "files.autoSave": "afterDelay",
+    "git.enableSmartCommit": true,
+    "git.fetchOnPull": true,
+    "git.showPushSuccessNotification": true,
+    "git.postCommitCommand": "push",
+    "github.username": "arvati",
+    "git.alwaysSignOff": true,
+
+    "mocha.env": {"DOTENV_CONFIG_PATH":"./test/.env"},
+    "mocha.requires": ["dotenv/config"],
+    "mocha.parallelTests": 1,
+    "mocha.coverage": {
+        "enable": false,
+        "decoration": false,
+        "runWithInterval": false,
+        "autoUpdateInterval": 20000,
+        "activeOnStart": false,
+        "runAfterTest": false,
+        "runCoverageAfterFileSave": false
+    },
+    "mocha.files.ignore": ["**/.git/**/*","**/node_modules/**/*","**/docs/**/*","**/build/**/*"],
+    "mocha.options": {"reporter":"Spec"},
+    "mocha.logVerbose":true,
+    "mocha.files.glob": "test/**/*.js",
+
+    "workbench.activityBar.visible": true,
+
+    "mochaExplorer.debuggerConfig": "Debug Mocha Tests",
+    "mochaExplorer.env": {"NODE_ENV": "test","DOTENV_CONFIG_PATH":"./test/.env" },
+    "mochaExplorer.envPath": "./test/.env",
+    "mochaExplorer.files": "test/**/*.js",
+    "mochaExplorer.require": ["dotenv/config"],
+    "mochaExplorer.logpanel": true,
+    "mochaExplorer.timeout": 20000,
+    "mochaExplorer.pruneFiles": true,
+    "mochaExplorer.ui": "bdd",
+
+    "eslint.packageManager": "yarn",
+    "yarn.runInTerminal": true,
+    "npm.packageManager": "yarn",
+    "npm.runSilent": true,
+    "npm.scriptExplorerAction": "run",
+    "mochaExplorer.exit": true,
+    "files.defaultLanguage": "javascript",
+    "files.eol": "\n",
+    "files.insertFinalNewline": true,
+    "files.simpleDialog.enable": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+
+    "zenMode.centerLayout": false,
+    "zenMode.fullScreen": false,
+    "zenMode.hideActivityBar": false,
+    "zenMode.hideLineNumbers": false,
+    "zenMode.hideStatusBar": false,
+    "zenMode.hideTabs": false,
+
+    "terminal.integrated.confirmOnExit": true,
+    "terminal.integrated.cursorStyle": "underline",
+    "terminal.integrated.fontSize": 10,
+    "terminal.integrated.rightClickBehavior": "copyPaste",
+    "terminal.integrated.copyOnSelection": true,
+    
+    "editor.minimap.enabled": false,
+    "mochaExplorer.debuggerPort": 9230
+}

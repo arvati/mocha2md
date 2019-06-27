@@ -20,6 +20,9 @@ coverage
 # nyc test coverage
 .nyc_output
 
+# codecov uploader
+.codecov
+
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
 
@@ -59,3 +62,14 @@ typings/
 
 # next.js build output
 .next
+
+# ruby
+*.gem
+.bundle
+.sass-cache
+_site
+docs/_site
+Gemfile.lock
+
+# Pycharm
+.idea

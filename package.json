@@ -1,0 +1,66 @@
+{
+    "name": "mocha2md",
+    "version": "0.0.1",
+    "description": "Mocha Report Generator to Markdown",
+    "keywords": [
+      "mocha",
+      "report",
+      "markdown"
+    ],
+    "private": false,
+    "homepage": "https://arvati.github.io/mocha2md",
+    "bugs": "https://github.com/arvati/mocha2md/issues",
+    "main": "lib/index.js",
+    "scripts": {
+      "docs": "node build/docs.js",
+      "test": "NODE_ENV=test nyc --silent --clean node build/test.js",
+      "cover": "nyc report",
+      "postcover": "curl -s https://codecov.io/bash > .codecov && chmod +x .codecov && ./.codecov -X gcov,search,fix,coveragepy,xcode -F unittests -c -f './coverage/lcov.info'",
+      "git": "git add . && git commit -m",
+      "postgit": "git push --all"
+    },
+    "repository": "github:arvati/mocha2md",
+    "author": "Ademar Arvati Filho (https://github.com/arvati)",
+    "license": "MIT",
+    "dependencies": {
+    },
+    "devDependencies": {
+      "chai": "^4.2.0",
+      "dotenv": "^8.0.0",
+      "jsdoc-to-markdown": "^5.0.0",
+      "mocha": "^6.1.4",
+      "nyc": "^14.1.1"
+    },
+    "engines": {
+      "node": ">7.10.1"
+    },
+    "files": [
+      "./lib/*.js",
+      "./docs/*.md",
+      "./AUTHORS.md",
+      "./test/*.js",
+      "./example/*.js",
+      "./build/*.js"
+    ],
+    "directories": {
+      "doc": "./docs",
+      "lib": "./lib",
+      "test": "./test",
+      "example": "./example"
+    },
+    "nyc": {
+      "all": false,
+      "check-coverage": false,
+      "reporter": ["lcovonly", "text-summary"],
+      "report-dir": "./coverage",
+      "temp-dir": "./.nyc_output",
+      "include": ["lib/**/*.js"],
+      "exclude": [
+        "build/**/*",
+        "docs/**/*",
+        "coverage/**",
+        "test/**"
+      ]
+    }
+  }
+  
